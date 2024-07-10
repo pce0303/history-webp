@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
+import './styles/App.css'
 import Main from './pages/Main'
 import Era from './pages/Era'
 import Detail from './pages/Detail'
