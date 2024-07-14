@@ -48,10 +48,32 @@ hr {
   margin-top: 450px;
   font-size: 10px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 
 .nav-img {
   width: 18px; height: 18px;
   margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  #wrapper2 {
+    width: 100%; height: 300px;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e7e7e7;
+    position: fixed;
+    z-index: 999;
+  }
+  
+  .nav-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  #footer {
+    margin-top: 20px;
+    text-align: center;
+  }
 }

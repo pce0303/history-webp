@@ -1,13 +1,9 @@
-  #wrapper {
+#wrapper {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-}
-
-#wrapper {
   margin-left: 200px; /* 네비게이션 바의 너비만큼 여백 추가 */
-  padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -57,5 +53,24 @@ a {
 
   h1 {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  #wrapper {
+    padding-top: 300px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .era {
+    padding: 30px;
+    font-size: 1.5em;
+  }
+
+  .era p {
+    font-size: 1em;
   }
 }

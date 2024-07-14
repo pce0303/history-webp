@@ -1,11 +1,34 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import '../styles/detail.css';
+
 export default function Detail() {
-  return(
+  const [event, setEvent] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/api/title/${id}`);
+        setEvent(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, [id]);
+
+  return (
     <div id="wrapper4">
-      <h1 className="detail-title"></h1>
-      <h3 className="subTitle"></h3>
-      <p className="detail-value" id="process"></p>
-      <p className="detail-value" id="limit"></p>
-      <p className="detail-value" id="result"></p>
+      {event ? (
+        <div id='event-wrapper'>
+          <h1 className="detail-title">{event.title}</h1>
+          <p className="detail-value" id="process">{event.detail}</p>
+        </div>
+      ) : (
+        <p id='load'>Loading...</p>
+      )}
     </div>
-  )
+  );
 }
