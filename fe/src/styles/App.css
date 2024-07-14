@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eeeeee;
-  background-image: url('/palace.jpg');
+  /* background-image: url('/palace.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
